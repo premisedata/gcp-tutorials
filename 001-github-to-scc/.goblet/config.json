@@ -1,0 +1,19 @@
+{
+    "cloudfunction":{
+        "environmentVariables":
+        {
+            "ORGANIZATION": "ORG_ID",
+            "SOURCE": "SOURCE_ID",
+            "GITHUB_SECRET": "GITHUB_SECRET"
+        },
+        "serviceAccountEmail": "SERVICE_ACCOUNT_EMAIL" 
+    },
+    "bindings": [
+        {
+            "role": "roles/cloudfunctions.invoker",
+            "members": [
+                "allUsers"
+            ]
+        }
+    ]
+}
