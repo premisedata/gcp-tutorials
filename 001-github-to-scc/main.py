@@ -40,6 +40,18 @@ def extract_category(github_alert):
 	if github_alert.get("secret_type"):
 		return "SECRET_SCANNING"
 
+def extract_severity(github_alert):
+	severity = github_alert.get("severity")
+	if severity == "low":
+		return Finding.Severity.LOW
+	if severity == "moderate":
+		return Finding.Severity.MEDIUM
+	if severity == "high":
+		return Finding.Severity.HIGH
+	if severity == "critical":
+		return Finding.Severity.CRITICAL
+	return Finding.Severity.SEVERITY_UNSPECIFIED
+
 def remove_null(alert):
 	return {k:v for k,v in alert.items() if v != None}
 
@@ -56,7 +68,7 @@ def post_finding(client, github_event, hashed_id):
 	finding = Finding(
 		state=Finding.State.ACTIVE,
 		resource_name=github_event['repository']["full_name"],
-		severity=Finding.Severity.SEVERITY_UNSPECIFIED,
+		severity=extract_severity(github_event['alert']),
 		category=category,
 		event_time=event_time,
 		source_properties=remove_null(github_event['alert']),
