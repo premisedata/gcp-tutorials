@@ -1,4 +1,4 @@
-# Github findings
+# Github Findings to SCC
 
 Create/Reopen/Resolve findings from [Github Security](https://docs.github.com/en/code-security) and forward to [GCP Security Command Center](https://cloud.google.com/security-command-center)
 
@@ -8,7 +8,7 @@ Create/Reopen/Resolve findings from [Github Security](https://docs.github.com/en
 
 ## Written Tutorial
 
-Coming Soon
+[Tutorial](https://engineering.premise.com/tutorial-publishing-github-findings-to-security-command-center-2d1749f530bc)
 
 ## Install
 
