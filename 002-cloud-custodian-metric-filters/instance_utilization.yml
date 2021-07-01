@@ -1,0 +1,10 @@
+policies:
+ - name: instance-utilization
+   resource: gcp.instance
+   filters:
+     - type: metrics
+       name: compute.googleapis.com/instance/cpu/utilization
+       aligner: ALIGN_MEAN
+       days: 30
+       value: 10
+       op: less-than
