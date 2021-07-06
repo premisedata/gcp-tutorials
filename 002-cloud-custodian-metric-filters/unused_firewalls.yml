@@ -1,0 +1,13 @@
+policies:
+ - name: unused-firewalls
+   resource: gcp.firewall
+   filters:
+     - type: metrics
+       name: firewallinsights.googleapis.com/subnet/firewall_hit_count
+       aligner: ALIGN_COUNT
+       days: 30
+       value: -1
+       missing-value: -1
+       op: eq
+   actions:
+     - disable

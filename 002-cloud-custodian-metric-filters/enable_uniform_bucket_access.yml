@@ -1,0 +1,15 @@
+policies:
+ - name: enable-uniform-access
+   resource: gcp.bucket
+   filters:
+     - iamConfiguration.uniformBucketLevelAccess.enabled: false
+     - type: metrics
+       name: storage.googleapis.com/authz/acl_based_object_access_count
+       value: -1
+       days: 30
+       missing-value: -1
+       op: eq
+       aligner: ALIGN_COUNT
+   actions:
+     - type: set-uniform-access
+       state: true
