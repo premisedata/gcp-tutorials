@@ -1,5 +1,5 @@
 policies:
- - name: enable-uniform-access
+ - name: enable-uniform-bucket-access
    resource: gcp.bucket
    filters:
      - iamConfiguration.uniformBucketLevelAccess.enabled: false

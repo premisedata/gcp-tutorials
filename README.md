@@ -10,3 +10,5 @@ Please clone and star this repo to stay up to date on changes.
 
 ## Tutorials
 001 - Forward Github Security Findings to Security Command Center [[ Source ](https://github.com/premisedata/gcp-tutorials/001-github-to-scc)] [ [Written](https://engineering.premise.com/tutorial-publishing-github-findings-to-security-command-center-2d1749f530bc)] - This tutorial goes over implementation on how to automatically forward Github security findings to GCP's security command center.
+
+002 - Using Cloud Custodian Metric Filters to safely find and remove cloud resources [[ Source ](https://github.com/premisedata/gcp-tutorials/002-cloud-custodian-metric-filters)] [ [Written](https://engineering.premise.com/cleaning-up-your-google-cloud-environment-safety-guaranteed-2de51fb8620a)] - Learn how to combine GCP's powerful built in metrics with Cloud Custodian to easily discover potential security risks, evaluate the impact those resources currently have in your environment, and then safely address those issues. 

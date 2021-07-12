@@ -2,7 +2,7 @@
 
 ## Written Tutorial
 
-Tutorial - coming soon
+[Tutorial](https://engineering.premise.com/cleaning-up-your-google-cloud-environment-safety-guaranteed-2de51fb8620a)
 
 ## Setting Up Cloud Custodian 
 
