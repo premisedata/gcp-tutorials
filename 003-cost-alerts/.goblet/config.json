@@ -1,0 +1,12 @@
+{
+    "cloudfunction":{
+        "environmentVariables":
+        {
+            "SLACK_WEBHOOK": "SLACK_WEBHOOK",
+            "BILLING_ORG": "BILLING_ORG",
+            "BILLING_ID": "BILLING_ID",
+            "BQ_TABLE": "BQ_TABLE"
+        },
+        "serviceAccountEmail": "SERVICE_ACCOUNT_EMAIL" 
+    }
+}
