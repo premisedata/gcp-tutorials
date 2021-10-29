@@ -6,7 +6,7 @@ Publish alerts daily on a per service basis to a slack channel when any large pe
 
 ## Written Tutorial
 
-Coming Soon
+[Tutorial](https://engineering.premise.com/tutorial-cost-spike-alerting-for-google-cloud-platform-gcp-46fd26ae3f6a)
 
 ## Install
 
