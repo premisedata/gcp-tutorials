@@ -7,7 +7,7 @@ Our solution at Premise is to maintain one single load balancer that then routes
 
 ## Written Tutorial
 
-Coming Soon
+[Tutorial](https://austennovis.medium.com/e15751853312)
 
 ## Prerequisites 
 
