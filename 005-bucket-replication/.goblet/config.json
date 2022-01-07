@@ -1,0 +1,11 @@
+{
+    "customFiles": ["bucket_replications.json"],
+    "function_name": "bucket-replicator",
+    "cloudfunction": {
+        "environmentVariables":
+        {
+            "GOOGLE_PROJECT": "your-project"
+        },
+        "serviceAccountEmail": "your-service-account@your-account.iam.gserviceaccount.com" 
+    } 
+}
