@@ -15,7 +15,7 @@ for src in bucket_replications[PROJECT].keys():
     def replicate(event):
         """Triggered by bucket create/modify blob. Copies the blob to all target buckets
 
-        :param event: bucket create/mobdify blob event
+        :param event: bucket create/modify blob event
         """
         bucket = event["bucket"]
         name = event["name"]
