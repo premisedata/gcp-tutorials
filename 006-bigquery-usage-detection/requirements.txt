@@ -1,0 +1,5 @@
+goblet-gcp==0.5.0
+google-cloud-bigquery==2.31.0
+google-cloud-storage==1.42.3
+slack_sdk==3.13.0
+texttable==1.6.4
