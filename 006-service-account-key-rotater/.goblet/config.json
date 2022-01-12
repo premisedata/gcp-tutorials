@@ -1,0 +1,16 @@
+{
+    "customFiles": [
+        "service-account-key-rotater.egg-info/*"
+    ],
+    "function_name": "service-account-key-rotater",
+    "cloudfunction": {
+        "environmentVariables": {
+            "PROJECT": "your-project",
+            "KEY_VALID_DAYS": "2",
+            "GH_ORGANIZATION": "your-gh-organization",
+            "STORAGE_BUCKET_NAME": "your-storage-bucket-name",
+            "ROTATION_PERIOD_SECONDS": "86400s"
+        },
+        "serviceAccountEmail": "your-service-account@your-account.iam.gserviceaccount.com"
+    }
+}
