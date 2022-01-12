@@ -29,7 +29,7 @@ gcloud functions call get-secret-key --project {PROJECT} --region {REGION} --dat
 ```
 
 
-## Github
+## Github Plugin
 
 The organization for Github Secret Rotation is set by `GH_ORGANIZATION`.
 
@@ -59,7 +59,7 @@ Note: ghr must be lowercase and type must reflect github
 ```
 
 
-## Google Cloud Storage
+## Google Cloud Storage Plugin
 
 The bucket for key rotation is set by `STORAGE_BUCKET_NAME`.
 
