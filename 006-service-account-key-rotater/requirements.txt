@@ -1,0 +1,6 @@
+goblet-gcp==0.5.2
+google-cloud-secret-manager==2.4.0
+google-api-python-client
+oauth2client
+google-cloud-storage==1.43.0
+git+https://github.com/PyGithub/PyGithub@master
