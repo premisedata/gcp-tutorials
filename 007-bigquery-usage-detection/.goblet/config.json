@@ -1,0 +1,14 @@
+{
+    "function_name": "bq-usage-detection",
+    "cloudfunction": {
+        "environmentVariables": {
+            "BUCKET": "your-bucket-name",
+            "PROJECT": "your-gcp-project-name",
+            "SLACK_WEBHOOK": "your-slack-webhook-url",
+            "UPLOAD_PATH": "directory/filename"
+        },
+        "availableMemoryMb": "512",
+        "serviceAccountEmail": "your-service-account@your-gcp-account.iam.gserviceaccount.com",
+        "timeout": "300s"
+    }
+}
