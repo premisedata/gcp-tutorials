@@ -20,3 +20,5 @@ Please clone and star this repo to stay up to date on changes.
 **005 - Bucket Replication** [[ Source ](https://github.com/premisedata/gcp-tutorials/005-bucket-replication)] [Written]()] - A simple way to set up bucket replication, leveraging goblet's use of decorators to set up cloud function triggers.
 
 **006 - Service Account Key Rotater** [[ Source ](https://github.com/premisedata/gcp-tutorials/006-service-account-key-rotater)] [Written]()] - A pluginable solution to automate Service Account Key rotations that currently supports Github Secrets and Cloud Storage.
+
+**007 - BigQuery Usage Detection** [[ Source ](https://github.com/premisedata/gcp-tutorials/007-bigquery-usage-detection)] [Written]()] - A cloud function to retrieve processing info about your BigQuery jobs, send a Slack message to inform of most expensive jobs, and upload a detailed summary to a Cloud Storage bucket.
