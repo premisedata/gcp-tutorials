@@ -1,0 +1,7 @@
+goblet-gcp==0.5.0
+google-cloud-secret-manager==2.4.0
+google-cloud-bigquery==2.31.0
+google-cloud-storage==1.42.3
+google-cloud-pubsub==2.5.0
+google-cloud-functions==1.4.0
+slack_sdk==3.13.0

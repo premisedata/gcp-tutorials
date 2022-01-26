@@ -1,12 +1,10 @@
 # Bucket Replication
 
-A quick tutorial for setting up bucket replication
-
-We leverage goblet's use of decorators to set up triggers for Cloud Functions, to treat the service like one Cloud Function with multiple triggers.
+A quick tutorial for setting up a Slack App for handling approval requests
 
 ## Written Tutorial
 
-[Tutorial](https://engineering.premise.com/tutorial-bucket-replication-for-google-cloud-platform-gcp-cloud-storage-44622c59299c)
+[Tutorial]()
 
 ## Prerequisites 
 
