@@ -18,3 +18,7 @@ Please clone and star this repo to stay up to date on changes.
 **004 - Create Dynamic Serverless Loadbalancers** [[ Source ](https://github.com/premisedata/gcp-tutorials/004-dynamic-serverless-loadbalancer)] [[Written](https://austennovis.medium.com/e15751853312)] - A simple, scalable, and customizable solution to deploy and maintain  load balancers for any number of serverless applications.
 
 **005 - Bucket Replication** [[ Source ](https://github.com/premisedata/gcp-tutorials/005-bucket-replication)] [Written](https://engineering.premise.com/tutorial-bucket-replication-for-google-cloud-platform-gcp-cloud-storage-44622c59299c)] - A simple way to set up bucket replication, leveraging goblet's use of decorators to set up cloud function triggers.
+
+**006 - Service Account Key Rotater** [[ Source ](https://github.com/premisedata/gcp-tutorials/006-service-account-key-rotater)] [Written]()] - A pluginable solution to automate Service Account Key rotations that currently supports Github Secrets and Cloud Storage.
+
+**007 - BigQuery Usage Detection** [[ Source ](https://github.com/premisedata/gcp-tutorials/007-bigquery-usage-detection)] [Written]()] - A cloud function to retrieve processing info about your BigQuery jobs, send a Slack message to inform of most expensive jobs, and upload a detailed summary to a Cloud Storage bucket.
