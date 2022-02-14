@@ -1,4 +1,4 @@
-from goblet import Goblet, Response
+from goblet import Goblet, Response, goblet_entrypoint
 from google.cloud import securitycenter
 from google.cloud.securitycenter_v1 import CreateFindingRequest, Finding, SetFindingStateRequest
 from hashlib import sha1, md5 
@@ -7,6 +7,7 @@ import datetime
 import os 
 
 app = Goblet(function_name="github-to-scc", local="local")
+goblet_entrypoint(app)
 
 ORGANIZATION = os.environ.get("ORGANIZATION")
 SOURCE = os.environ.get("SOURCE")
