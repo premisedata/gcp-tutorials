@@ -12,6 +12,10 @@ To create a new key use the `service-account-key-rotater` endpoint. The request 
 
 The keys are rotated through a pubsub topic.
 
+## Written Tutorial
+
+[Tutorial](https://engineering.premise.com/tutorial-rotating-service-account-keys-using-secret-manager-5f4dc7142d4b)
+
 ## Getting Keys 
 
 ### Locally

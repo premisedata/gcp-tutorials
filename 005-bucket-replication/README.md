@@ -6,7 +6,7 @@ We leverage goblet's use of decorators to set up triggers for Cloud Functions, t
 
 ## Written Tutorial
 
-[Tutorial]()
+[Tutorial](https://engineering.premise.com/tutorial-bucket-replication-for-google-cloud-platform-gcp-cloud-storage-44622c59299c)
 
 ## Prerequisites 
 
