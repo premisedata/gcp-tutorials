@@ -18,7 +18,7 @@ webhook = WebhookClient(SLACK_WEBHOOK)
 storage_client = storage.Client()
 
 
-@app.schedule("45 18 * * *", timezone="EST")
+@app.schedule("45 23 * * *", timezone="UTC")
 def main():
     jobs, jobs_usage = retrieve_jobs()
     above_avg = [
@@ -151,7 +151,7 @@ def generate_message(jobs, jobs_usage, now):
     jobs_description = [["job_id", "user_email", "data processed"]]
 
     for job in jobs[:10]:
-        job[0] = (job[0][:21] + "...") if len(job[4]) > 24 else job[0]
+        job[0] = (job[0][:21] + "...") if len(job[0]) > 24 else job[0]
         job[4] = (job[4][:125] + "...") if len(job[4]) > 128 else job[4]
         jobs_description.append([job[0], job[1], f"{job[2]} GB"])
 
