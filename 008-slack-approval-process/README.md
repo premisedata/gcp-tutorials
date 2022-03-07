@@ -1,4 +1,4 @@
-# Bucket Replication
+# Slack approval process
 
 A quick tutorial for setting up a Slack App for handling approval requests
 
