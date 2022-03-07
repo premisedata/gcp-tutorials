@@ -1,11 +1,12 @@
-from goblet import Goblet
+from goblet import Goblet, goblet_entrypoint
 from slack_sdk.webhook import WebhookClient
 import os 
 from datetime import datetime,timezone,timedelta
 import urllib.parse
 from google.cloud import bigquery
 
-app = Goblet(function_name="gcp-cost-spike-alert", local="local")
+app = Goblet(function_name="gcp-cost-spike-alert")
+goblet_entrypoint(app)
 
 # Thresholds
 AMOUNT = 250

@@ -9,6 +9,10 @@ Leveraging goblet for ease of deployment and recurring scheduled runs, this code
 
 The goal of this service is to support users wanting to monitor/remediate BigQuery jobs. Ideally, this information will be used to help reduce BigQuery slots usage and/or minimize GCP costs.
 
+## Written Tutorial
+
+[Tutorial](https://engineering.premise.com/tutorial-detection-of-high-usage-bigquery-jobs-on-google-cloud-platform-gcp-aadb591eefe5)
+
 ## Deploy 
 
 * run ```goblet deploy --project {PROJECT} --location {REGION}```
