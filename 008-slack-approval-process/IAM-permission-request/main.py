@@ -16,10 +16,12 @@ def send_iam_request(request):
     app.log.info(f"Request: {json_data}")
     # extract data from request
     project = json_data["project"]
-    resource = json_data["resource"]
+    resource_type = json_data["resource_type"]
+    resource_name = json_data["resource_name"]
     role = json_data["role"]
     principal = json_data["principal"]
-    region = json_data["region"]
+    region = json_data.get("region", "")
+    user_email = json_data["user_email"]
     # get webhook from secret manager
     secret_client = secretmanager.SecretManagerServiceClient()
     webhook = secret_client.access_secret_version(
@@ -50,7 +52,14 @@ def send_iam_request(request):
                     "type": "section",
                     "text": {
 				        "type": "mrkdwn",
-				        "text": f"Resource: {resource if not region else region + '/' + resource}"
+				        "text": f"Resource Type: {resource_type}"
+			        },
+                },
+                {
+                    "type": "section",
+                    "text": {
+				        "type": "mrkdwn",
+				        "text": f"Resource Name: {resource_name if not region else region + '/' + resource_name}"
 			        },
                 },
                 {
@@ -68,6 +77,13 @@ def send_iam_request(request):
 			        },
                 },
                 {
+                    "type": "section",
+                    "text": {
+                        "type": "mrkdwn",
+                        "text": f"Requester: {user_email}"
+                    }
+                },
+                {
                     "type": "actions",
                     "elements": [
                         {
@@ -79,7 +95,7 @@ def send_iam_request(request):
                             },
                             "style": "primary",
                             "action_id": "request_approve",
-                            "value": f"{project},{resource},{principal},{role},{region}",
+                            "value": f"{project},{resource_type},{resource_name},{principal},{role},{region},{user_email}",
                             "confirm": {
                                 "title": {
                                     "type": "plain_text",
@@ -87,7 +103,7 @@ def send_iam_request(request):
                                 },
                                 "text": {
                                     "type": "mrkdwn",
-                                    "text": f"{role} would be added to {principal} for {resource} in {project}",
+                                    "text": f"{role} would be added to {principal} for {resource_name} in {project}",
                                 },
                                 "confirm": {"type": "plain_text", "text": "Do it"},
                                 "deny": {
@@ -103,7 +119,7 @@ def send_iam_request(request):
                                 "emoji": True,
                                 "text": "Reject",
                             },
-                            "value": f"{project},{resource},{principal},{role},{region}",
+                            "value": f"{project},{resource_type},{resource_name},{principal},{role},{region},{user_email}",
                             "style": "danger",
                             "action_id": "request_reject",
                         },
