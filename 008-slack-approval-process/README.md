@@ -2,6 +2,15 @@
 
 A quick tutorial for setting up a Slack App for handling approval requests
 
+The service currently supports changing IAM policies at the project level and resource level for:
+* gcs buckets
+* secret manager secrets
+* pubsub topics and subscriptions
+* bigquery tables
+* cloud functions
+* cloud run
+* artifact registry
+
 ## Written Tutorial
 
 [Tutorial]()
@@ -14,11 +23,16 @@ A quick tutorial for setting up a Slack App for handling approval requests
 
 ## Setup
 
-Make sure you have a service account with `storage.objectViewer` for the source bucket and `storage.objectAdmin` for the destination bucket.
-It is probably best to set this up at the bucket level.
-
-Replace all the placeholders in `.goblet/config.json` and `bucket_replications.json` with your project, service account, and bucket pairings.
+It will probably be easiest to follow the medium article, because it has screenshots and snippets.
+To run through the steps briefly:
+* Create slack app
+* Create webhooks for the app
+* Create secrets in GCP to store the webhooks
+* Create service accounts that can modify iam policies for the resources you want
+* Update the config files with all the variables you created above
+* Deploy the cloud functions
+* Update your slack app interactivity url to the endpoint for your provision function
 
 ## Deploy
 
-Deploy by running `goblet deploy --project {PROJECT} --location {REGION}`
+Deploy by running `goblet deploy --project {PROJECT} --location {REGION}` for both the provision and request functions

@@ -1,3 +1,3 @@
-goblet-gcp==0.5.0
+goblet-gcp==0.6.3
 slack_sdk==3.13.0
 google-cloud-secret-manager==2.4.0

@@ -29,7 +29,7 @@ def provision_iam_request(request):
     action_id = action["action_id"]
     action_value = action["value"]
     user = ' '.join(payload["user"]["name"].split('.'))
-    project, resource, principal, role, region = action_value.split(",")
+    project, resource_type, resource_name, principal, role, region, user_email = action_value.split(",")
     # get slack webhooks from secret manager
     secret_client = secretmanager.SecretManagerServiceClient()
     webhook = secret_client.access_secret_version(
@@ -42,43 +42,48 @@ def provision_iam_request(request):
     response_slack_client = WebhookClient(response_url)
     if action_id == "request_approve":
         try:
-            resource_type, resource_name = resource.split("/", 1)
             if resource_type == "bucket":
                 add_bucket_iam_access(project, resource_name, role, principal)
             elif resource_type == "secret":
                 add_secret_iam_access(project, resource_name, role, principal)
             elif resource_type == "topic":
                 add_topic_iam_access(project, resource_name, role, principal)
+            elif resource_type == "subscription":
+                add_subscription_iam_access(project, resource_name, role, principal)
             elif resource_type == "bq-table":
                 add_bq_table_iam_access(project, resource_name, role, principal)
             elif resource_type == "function":
                 add_function_iam_access(project, resource_name, role, principal, region)
             elif resource_type == "cloud-run":
                 add_run_iam_access(project, resource_name, role, principal, region)
+            elif resource_type == "registry":
+                add_artifact_registry_iam_access(project, resource_name, role, principal, region)
+            elif resource_type == "project":
+                add_project_iam_access(project, role, principal)
             else:
-                app.log.error(f"Unsupported resource: {resource}")
+                app.log.error(f"Unsupported resource: {resource_type}")
                 send_status_message(
-                    status_slack_client, project, resource, role, principal, region, "Resource not supported"
+                    status_slack_client, project, resource_type, resource_name, role, principal, region, user_email, "Resource not supported"
                 )
                 return
         except Exception as e:
             app.log.error(f"Error while provisioning: {e}")
             for client in (status_slack_client, response_slack_client):
                 send_status_message(
-                    client, project, resource, role, principal, region, "Error while provisioning"
+                    client, project, resource_type, resource_name, role, principal, region, user_email, f"Error while provisioning: {e}"
                 )
             return Response("Error while provisioning", status_code=400)
         app.log.info(f"Added {principal} with {role} to {resource_name} in {project}")
         app.log.info("Sending approved status message")
         for client in (status_slack_client, response_slack_client):
             send_status_message(
-                client, project, resource, role, principal, region, f"Approved by {user}"
+                client, project, resource_type, resource_name, role, principal, region, user_email, f"Approved by {user}"
             )
     elif action_id == "request_reject":
         app.log.info("Sending rejected status message")
         for client in (status_slack_client, response_slack_client):
             send_status_message(
-                client, project, resource, role, principal, region, f"Rejected by {user}"
+                client, project, resource_type, resource_name, role, principal, region, user_email, f"Rejected by {user}"
             )
 
 
@@ -91,7 +96,7 @@ def is_valid_signature(headers, data, signing_secret):
     return verifier.is_valid(data, timestamp, signature)
 
 
-def send_status_message(client, project, resource, role, principal, region, status):
+def send_status_message(client, project, resource_type, resource_name, role, principal, region, user_email, status):
     """Sends request status message through the provided slack client
     """
     try:
@@ -117,7 +122,14 @@ def send_status_message(client, project, resource, role, principal, region, stat
                     "type": "section",
                     "text": {
 				        "type": "mrkdwn",
-				        "text": f"Resource: {resource if not region else region + '/' + resource}"
+                        "text": f"Resource Type: {resource_type}"
+                    }
+                },
+                {
+                    "type": "section",
+                    "text": {
+				        "type": "mrkdwn",
+				        "text": f"Resource Name: {resource_name if not region else region + '/' + resource_name}"
 			        },
                 },
                 {
@@ -141,11 +153,27 @@ def send_status_message(client, project, resource, role, principal, region, stat
 				        "text": f"Status: {status}"
 			        },
                 },
+                {
+                    "type": "section",
+                    "text": {
+				        "type": "mrkdwn",
+				        "text": f"Requester: {user_email}"
+			        },
+                },
             ],
         )
         app.log.info(response.status_code)
     except errors.SlackApiError as e:
         app.log.error(e)
+    
+
+def add_binding(client, resource, role, principal):
+    """Generic add-binding procedure
+    Not every resource has this method available though. Need to check to the docs
+    """
+    policy = client.get_iam_policy(request={"resource": resource})
+    policy.bindings.add(role=role, members=[principal])
+    client.set_iam_policy(request={"resource": resource, "policy": policy})
 
 
 def add_bucket_iam_access(project, bucket_name, role, principal):
@@ -165,9 +193,7 @@ def add_secret_iam_access(project, secret_name, role, principal):
     """
     client = secretmanager.SecretManagerServiceClient()
     secret_path = f"projects/{project}/secrets/{secret_name}"
-    policy = client.get_iam_policy(request={"resource": secret_path})
-    policy.bindings.add(role=role, members=[principal])
-    client.set_iam_policy(request={"resource": secret_path, "policy": policy})
+    add_binding(client, secret_path, role, principal)
 
 
 def add_topic_iam_access(project, topic_name, role, principal):
@@ -177,9 +203,17 @@ def add_topic_iam_access(project, topic_name, role, principal):
 
     client = pubsub_v1.PublisherClient()
     topic_path = f"projects/{project}/topics/{topic_name}"
-    policy = client.get_iam_policy(request={"resource": topic_path})
-    policy.bindings.add(role=role, members=[principal])
-    client.set_iam_policy(request={"resource": topic_path, "policy": policy})
+    add_binding(client, topic_path, role, principal)
+
+
+def add_subscription_iam_access(project, subscription_name, role, principal):
+    """Adds subscription access for the principal
+    """
+    from google.cloud import pubsub_v1
+
+    client = pubsub_v1.SubscriberClient()
+    subscription_path = f"projects/{project}/subscriptions/{subscription_name}"
+    add_binding(client, subscription_path, role, principal)
 
 
 def add_bq_table_iam_access(project, table_name, role, principal):
@@ -204,6 +238,42 @@ def add_function_iam_access(project, function_name, role, principal, region):
 
     client = functions_v1.CloudFunctionsServiceClient()
     function_path = f"projects/{project}/locations/{region}/functions/{function_name}"
-    policy = client.get_iam_policy(request={"resource": function_path})
-    policy.bindings.add(role=role, members=[principal])
-    client.set_iam_policy(request={"resource": function_path, "policy": policy})
+    add_binding(client, function_path, role, principal)
+
+
+def add_run_iam_access(project, service_name, role, principal, region):
+    """Adds cloud run service access for the principal
+    """
+    from googleapiclient import discovery
+    from oauth2client.client import GoogleCredentials
+
+    credentials = GoogleCredentials.get_application_default()
+    client = discovery.build("run", "v1", credentials=credentials).projects().locations().services()
+    from google.iam.v1.policy_pb2 import Policy
+    resource = f"projects/{project}/locations/{region}/services/{service_name}"
+    policy = client.getIamPolicy(resource=resource).execute()
+    bindings = policy.get("bindings", [])
+    bindings.append({"role": f"{role}", "members": [f"{principal}"]})
+    policy["bindings"] = bindings
+    response = client.setIamPolicy(resource=resource, body={"policy": policy}).execute()
+
+
+def add_project_iam_access(project, role, principal):
+    """
+    """
+    from google.cloud import resourcemanager_v3
+
+    client = resourcemanager_v3.ProjectsClient()
+    project_path = f"projects/{project}"
+    add_binding(client, project_path, role, principal)
+
+
+def add_artifact_registry_iam_access(project, registry_name, role, principal, region):
+    """
+    """
+    from google.cloud import artifactregistry_v1beta2
+
+    client = artifactregistry_v1beta2.ArtifactRegistryClient()
+    registry_path = f"projects/{project}/locations/{region}/repositories/{registry_name}"
+    add_binding(client, registry_path, role, principal)
+
