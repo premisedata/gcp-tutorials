@@ -1,0 +1,11 @@
+{
+    "function_name": "IAM-permission-provision",
+    "cloudfunction": {
+        "environmentVariables": {
+            "SIGNATURE_SECRET_ID": "{SLACK BOT SIGNING SECRET PATH}",
+            "WEBHOOK_SECRET_ID": "{STATUS WEBHOOK SECRET PATH}"
+        },
+        "maxInstances": 2,
+        "serviceAccountEmail": "{SERVICE ACCOUNT}" 
+    }
+}

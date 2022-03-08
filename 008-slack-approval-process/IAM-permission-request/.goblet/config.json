@@ -1,0 +1,9 @@
+{
+    "function_name": "IAM-permission-request",
+    "cloudfunction": {
+        "environmentVariables": {
+            "WEBHOOK_SECRET_ID": "{APPROVERS WEBHOOK SECRET PATH}"
+        },
+        "serviceAccountEmail": "{SERVICE ACCOUNT}" 
+    }
+}
