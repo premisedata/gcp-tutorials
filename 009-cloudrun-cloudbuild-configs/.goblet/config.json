@@ -1,6 +1,6 @@
 {
     "cloudrun": {
-        "traffic": 100
+        "traffic": 50
     },
     "cloudrun_revision": {
         "serviceAccount": "name@PROJECT.iam.gserviceaccount.com"
@@ -12,7 +12,7 @@
                 "value": "env-variable-value"
             },
             {
-                "name": "env-variable-name",
+                "name": "env-variable-name-2",
                 "valueSource": {
                     "secretKeyRef" : {
                         "secret": "secret-name",
