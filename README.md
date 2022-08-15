@@ -21,6 +21,8 @@ Please clone and star this repo to stay up to date on changes.
 
 **006 - Service Account Key Rotater** [[ Source ](https://github.com/premisedata/gcp-tutorials/006-service-account-key-rotater)] [[Written](https://engineering.premise.com/tutorial-rotating-service-account-keys-using-secret-manager-5f4dc7142d4b)] - A pluginable solution to automate Service Account Key rotations that currently supports Github Secrets and Cloud Storage.
 
-**007 - BigQuery Usage Detection** [[ Source ](https://github.com/premisedata/gcp-tutorials/007-bigquery-usage-detection)] [[Written](https://engineering.premise.com/tutorial-detection-of-high-usage-bigquery-jobs-on-google-cloud-platform-gcp-aadb591eefe5)] - A cloud function to retrieve processing info about your BigQuery jobs, send a Slack message to inform of most expensive jobs, and upload a detailed summary to a Cloud Storage bucket.
+**007 - BigQuery Usage Detection** [[ Source ](https://github.com/premisedata/gcp-tutorials/007-bigquery-usage-detection)] [Written](https://engineering.premise.com/tutorial-detection-of-high-usage-bigquery-jobs-on-google-cloud-platform-gcp-aadb591eefe5)] - A cloud function to retrieve processing info about your BigQuery jobs, send a Slack message to inform of most expensive jobs, and upload a detailed summary to a Cloud Storage bucket.
 
-**008 - Slack Approval Process** [[ Source ](https://github.com/premisedata/gcp-tutorials/008-slack-approval-process)] [[ Written ]()] - A quick walk-through on setting up an approval process facilitated by slack.
+**008 - Slack Approval Process** [[ Source ](https://github.com/premisedata/gcp-tutorials/008-slack-approval-process)] [Written](https://engineering.premise.com/tutorial-setting-up-approval-processes-with-slack-apps-d325aee31763)] - A quick walk-through on setting up an approval process facilitated by slack.
+
+**009 - Cloudrun Cloudbuild Configs** [[ Source ](https://github.com/premisedata/gcp-tutorials/009-cloudrun-cloudbuild-configs)] [[ Written ]()] - A quick walk-through on configuring cloudrun builds with goblet, including traffic, secrets, and artifact registries.
