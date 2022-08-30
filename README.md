@@ -26,3 +26,5 @@ Please clone and star this repo to stay up to date on changes.
 **008 - Slack Approval Process** [[ Source ](https://github.com/premisedata/gcp-tutorials/008-slack-approval-process)] [Written](https://engineering.premise.com/tutorial-setting-up-approval-processes-with-slack-apps-d325aee31763)] - A quick walk-through on setting up an approval process facilitated by slack.
 
 **009 - Cloudrun Cloudbuild Configs** [[ Source ](https://github.com/premisedata/gcp-tutorials/009-cloudrun-cloudbuild-configs)] [[ Written ]()] - A quick walk-through on configuring cloudrun builds with goblet, including traffic, secrets, and artifact registries.
+
+**010 - Cloudrun Jobs** [[ Source ](https://github.com/premisedata/gcp-tutorials/010-cloudrun-jobs)] [[ Written ]()] - A tutorial on how to deploy cloudrun jobs using goblet.

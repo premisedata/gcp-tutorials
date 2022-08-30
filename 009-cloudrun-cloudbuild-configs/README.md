@@ -10,7 +10,7 @@ Configurations shown:
 
 ## Written Tutorial
 
-[Tutorial]()
+[Tutorial](https://engineering.premise.com/traffic-revisions-and-artifact-registries-in-google-cloud-run-made-easy-with-goblet-1a3fa86de25c)
 
 ## Install
 
