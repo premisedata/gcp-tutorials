@@ -25,8 +25,10 @@ Please clone and star this repo to stay up to date on changes.
 
 **008 - Slack Approval Process** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/008-slack-approval-process)] [Written](https://engineering.premise.com/tutorial-setting-up-approval-processes-with-slack-apps-d325aee31763)] - A quick walk-through on setting up an approval process facilitated by slack.
 
-**009 - Cloudrun Cloudbuild Configs** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/009-cloudrun-cloudbuild-configs)] [[ Written ]()] - A quick walk-through on configuring cloudrun builds with goblet, including traffic, secrets, and artifact registries.
+**009 - Cloudrun Cloudbuild Configs** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/009-cloudrun-cloudbuild-configs)] [[ Written ](https://engineering.premise.com/traffic-revisions-and-artifact-registries-in-google-cloud-run-made-easy-with-goblet-1a3fa86de25c)] - A quick walk-through on configuring cloudrun builds with goblet, including traffic, secrets, and artifact registries.
 
-**010 - Cloudrun Jobs** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/010-cloudrun-jobs)] [[ Written ](https://engineering.premise.com/tutorial-deploying-cloud-run-jobs-9435466b26f5)] - A tutorial on how to deploy cloudrun jobs using goblet.
+**010 - Cloudrun Jobs** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/010-cloudrun-jobs)] [[ Written ](https://medium.com/engineering-at-premise/tutorial-deploying-cloud-run-jobs-9435466b26f5)] - A tutorial on how to deploy cloudrun jobs using goblet.
 
 **011 - Cloudrun Cors Anywhere** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-cloud-run-cors-anywhere)] [[ Written ](https://engineering.premise.com/tutorial-handling-cors-in-backstage-api-swagger-documentation-hosted-on-cloud-run-gcp-65584811ec0d)] - A tutorial on how to deploy cors-anywhere proxy on Cloud Run.
+
+**012 - Backend Alerts** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-backend-alerts)] [[ Written ]()] - A tutorial on how to deploy backend alerts alongside your codebase using goblet.
