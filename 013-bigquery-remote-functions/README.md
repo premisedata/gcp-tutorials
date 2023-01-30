@@ -1,6 +1,6 @@
 # Backend Alerts
 
-This is a tutorial on how to deploy a cloudfunction as well as various GCP monitoring alerts.
+This is a tutorial on how to deploy a BigQuery remote functions.
 
 ## Written Tutorial
 
@@ -18,7 +18,7 @@ This is a tutorial on how to deploy a cloudfunction as well as various GCP monit
 
 ## Config
 
-Enter a Notification Channel in `config.json` if you would like the alert to trigger a channel. Otherwise you can remove the alerting section.
+You have to have a dataset created in BigQuery. In this case Dataset is called example-data-set
 
 ## Deploy
 
