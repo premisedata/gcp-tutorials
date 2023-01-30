@@ -6,7 +6,11 @@ Please clone and star this repo to stay up to date on changes.
 
 ## Packages by Premise
 
-[Goblet](https://github.com/anovis/goblet): An easy-to-use framework that enables developers to quickly spin up fully featured REST APIs with python on GCP
+[Goblet](https://github.com/goblet/goblet): An easy-to-use framework that enables developers to quickly spin up fully featured REST APIs with python on GCP
+
+[Goblet Workflows](https://github.com/goblet/goblet_workflows): A wrapper around GCP Workflows, which is a fully-managed orchestration platform that executes services in an order that you define: a workflow. These workflows can combine services including custom services hosted on Cloud Run or Cloud Functions, Google Cloud services such as Cloud Vision AI and BigQuery, and any HTTP-based API.
+
+[Slack Approvals](https://github.com/premisedata/slack-approval): This python library serves as the basis for managing and deploying a lightweight approval workflow based on Slack and GCP. This library contains two key classes, SlackRequest and SlackProvision as well as the logic to deploy them to GCP (See 008 for tutorial).
 
 ## Tutorials
 **001 - Forward Github Security Findings to Security Command Center** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/001-github-to-scc)] [ [Written](https://engineering.premise.com/tutorial-publishing-github-findings-to-security-command-center-2d1749f530bc)] - This tutorial goes over implementation on how to automatically forward Github security findings to GCP's security command center.
@@ -31,4 +35,4 @@ Please clone and star this repo to stay up to date on changes.
 
 **011 - Cloudrun Cors Anywhere** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-cloud-run-cors-anywhere)] [[ Written ](https://engineering.premise.com/tutorial-handling-cors-in-backstage-api-swagger-documentation-hosted-on-cloud-run-gcp-65584811ec0d)] - A tutorial on how to deploy cors-anywhere proxy on Cloud Run.
 
-**012 - Backend Alerts** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-backend-alerts)] [[ Written ]()] - A tutorial on how to deploy backend alerts alongside your codebase using goblet.
+**012 - Backend Alerts** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-backend-alerts)] [[ Written ](https://engineering.premise.com/gcp-alerts-the-easy-way-alerting-for-cloudfunctions-and-cloudrun-using-goblet-62bdf2126ef6)] - A tutorial on how to deploy backend alerts alongside your codebase using goblet.
