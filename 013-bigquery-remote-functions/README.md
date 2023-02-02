@@ -1,4 +1,4 @@
-# Backend Alerts
+# BigQuery Remote Functions
 
 This is a tutorial on how to deploy a BigQuery remote functions.
 
