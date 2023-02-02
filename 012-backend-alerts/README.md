@@ -4,7 +4,7 @@ This is a tutorial on how to deploy a cloudfunction as well as various GCP monit
 
 ## Written Tutorial
 
-[Tutorial]()
+[Tutorial](https://engineering.premise.com/gcp-alerts-the-easy-way-alerting-for-cloudfunctions-and-cloudrun-using-goblet-62bdf2126ef6)
 
 ## Install
 
