@@ -36,3 +36,5 @@ Please clone and star this repo to stay up to date on changes.
 **011 - Cloudrun Cors Anywhere** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-cloud-run-cors-anywhere)] [[ Written ](https://engineering.premise.com/tutorial-handling-cors-in-backstage-api-swagger-documentation-hosted-on-cloud-run-gcp-65584811ec0d)] - A tutorial on how to deploy cors-anywhere proxy on Cloud Run.
 
 **012 - Backend Alerts** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-backend-alerts)] [[ Written ](https://engineering.premise.com/gcp-alerts-the-easy-way-alerting-for-cloudfunctions-and-cloudrun-using-goblet-62bdf2126ef6)] - A tutorial on how to deploy backend alerts alongside your codebase using goblet.
+
+**013 - BigQuery Remote Functions** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/013-bigquery-remote-functions)] [[ Written ]()] - A tutorial on how to deploy BigQuery Remote Functions on GCP using goblet.
