@@ -1,4 +1,3 @@
-import logging
 import os
 
 import redis
@@ -8,12 +7,9 @@ app = Goblet(
     function_name="goblet-private-services", backend="cloudrun", routes_type="cloudrun"
 )
 goblet_entrypoint(app)
-app.log.setLevel(logging.INFO)
 
 app.vpcconnector("goblet-vpcconnector")
 app.redis("goblet-redis")
-
-log = logging.getLogger(__name__)
 
 redis_host = os.environ.get("REDIS_HOST", "localhost")
 redis_port = int(os.environ.get("REDIS_PORT", 6379))
