@@ -1,0 +1,10 @@
+{
+    "cloudrun": {},
+    "vpcconnector": {
+        "ipCidrRange": "10.32.1.0/28"
+    },
+    "redis": {
+        "connectMode": "PRIVATE_SERVICE_ACCESS",
+        "authorizedNetwork": "projects/{PROJECT}/global/networks/default"
+    }
+}
