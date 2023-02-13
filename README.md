@@ -12,6 +12,9 @@ Please clone and star this repo to stay up to date on changes.
 
 [Slack Approvals](https://github.com/premisedata/slack-approval): This python library serves as the basis for managing and deploying a lightweight approval workflow based on Slack and GCP. This library contains two key classes, SlackRequest and SlackProvision as well as the logic to deploy them to GCP (See 008 for tutorial).
 
+[Goblet GCP Client](https://github.com/goblet/goblet_gcp_client): Goblet GCP Client is a util library with support for creating GCP resource clients, GCP integration tests, and other related utils.
+
+
 ## Tutorials
 **001 - Forward Github Security Findings to Security Command Center** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/001-github-to-scc)] [ [Written](https://engineering.premise.com/tutorial-publishing-github-findings-to-security-command-center-2d1749f530bc)] - This tutorial goes over implementation on how to automatically forward Github security findings to GCP's security command center.
 
@@ -37,6 +40,6 @@ Please clone and star this repo to stay up to date on changes.
 
 **012 - Backend Alerts** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/011-backend-alerts)] [[ Written ](https://engineering.premise.com/gcp-alerts-the-easy-way-alerting-for-cloudfunctions-and-cloudrun-using-goblet-62bdf2126ef6)] - A tutorial on how to deploy backend alerts alongside your codebase using goblet.
 
-**013 - BigQuery Remote Functions** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/013-bigquery-remote-functions)] [[ Written ]()] - A tutorial on how to deploy BigQuery Remote Functions on GCP using goblet.
+**013 - BigQuery Remote Functions** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/013-bigquery-remote-functions)] [[ Written ](https://engineering.premise.com/tutorial-deploying-bigquery-remote-functions-9040316d9d3e)] - A tutorial on how to deploy BigQuery Remote Functions on GCP using goblet.
 
-**014 - Private Service Access using Goblet** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/014-goblet-private-services)] [[ Written ](TBD)] - A tutorial on how on deploying and connecting to private GCP services using Goblet
+**014 - Private Service Access using Goblet** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/014-goblet-private-services)] [[ Written ](https://engineering.premise.com/tutorial-connecting-cloudrun-and-cloudfunctions-to-redis-and-other-private-services-using-goblet-5782f80da6a0)] - A tutorial on how on deploying and connecting to private GCP services using Goblet
