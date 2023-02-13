@@ -4,7 +4,7 @@ This is a tutorial on how to deploy a BigQuery remote functions.
 
 ## Written Tutorial
 
-[Tutorial]()
+[Tutorial](https://engineering.premise.com/tutorial-deploying-bigquery-remote-functions-9040316d9d3e)
 
 ## Install
 

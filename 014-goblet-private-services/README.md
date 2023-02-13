@@ -3,7 +3,7 @@
 This is a tutorial for connecting to a Redis instance using an Internal IP leveraging GCP Cloud Run and VPC Connector.
 
 ## Written Tutorial 
-[Tutorial]()
+[Tutorial](https://engineering.premise.com/tutorial-connecting-cloudrun-and-cloudfunctions-to-redis-and-other-private-services-using-goblet-5782f80da6a0)
 
 ## Install
 
