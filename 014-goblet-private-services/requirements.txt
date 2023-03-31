@@ -1,2 +1,2 @@
 goblet-gcp==0.10.2
-redis==4.4.2
+redis==4.4.4
