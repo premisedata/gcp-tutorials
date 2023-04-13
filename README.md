@@ -43,3 +43,5 @@ Please clone and star this repo to stay up to date on changes.
 **013 - BigQuery Remote Functions** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/013-bigquery-remote-functions)] [[ Written ](https://engineering.premise.com/tutorial-deploying-bigquery-remote-functions-9040316d9d3e)] - A tutorial on how to deploy BigQuery Remote Functions on GCP using goblet.
 
 **014 - Private Service Access using Goblet** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/014-goblet-private-services)] [[ Written ](https://engineering.premise.com/tutorial-connecting-cloudrun-and-cloudfunctions-to-redis-and-other-private-services-using-goblet-5782f80da6a0)] - A tutorial on how on deploying and connecting to private GCP services using Goblet
+
+**015 - CloudTasks with Goblet** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/015-goblet-cloudtask)] [[ Written ](https://engineering.premise.com/)] - A tutorial on how to deploy CloudTaskQueues, enqueue CloudTasks and handle CloudTasks all with Goblet.
