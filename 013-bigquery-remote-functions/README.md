@@ -1,10 +1,10 @@
-# Cloud Run Jobs
+# BigQuery Remote Functions
 
-This is a tutorial on how to deploy a cloudrun job using goblet.
+This is a tutorial on how to deploy a BigQuery remote functions.
 
 ## Written Tutorial
 
-[Tutorial](https://engineering.premise.com/tutorial-deploying-cloud-run-jobs-9435466b26f5)
+[Tutorial](https://engineering.premise.com/tutorial-deploying-bigquery-remote-functions-9040316d9d3e)
 
 ## Install
 
@@ -18,7 +18,7 @@ This is a tutorial on how to deploy a cloudrun job using goblet.
 
 ## Config
 
-Enter service account in `config.json` if you are deploying a scheduled job
+You have to have a dataset created in BigQuery. In this case Dataset is called example-data-set
 
 ## Deploy
 

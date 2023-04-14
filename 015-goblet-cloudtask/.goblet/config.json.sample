@@ -1,0 +1,23 @@
+{
+  "cloudrun_revision": {
+    "serviceAccount": "cloudrun@{PROJECT}.iam.gserviceaccount.com"
+  },
+  "cloudtask": {
+    "serviceAccount": "cloudtask@{PROJECT}.iam.gserviceaccount.com"
+  },
+  "cloudtaskqueue": {
+    "my-queue": {
+      "rateLimits": {
+        "maxDispatchesPerSecond": 500,
+        "maxBurstSize": 100,
+        "maxConcurrentDispatches": 1000
+      },
+      "retryConfig": {
+        "maxAttempts": 10,
+        "minBackoff": "0.100s",
+        "maxBackoff": "3600s",
+        "maxDoublings": 16
+      }
+    }
+  }
+}
