@@ -1,0 +1,23 @@
+{
+  "function_name": "{FUNCTION_NAME}",
+  "cloudfunction": {
+      "environmentVariables": {
+          "CLOUDRUN_CPU_MIN_VALUE": "1000",
+          "CLOUDRUN_MEMORY_MIN_VALUE": "512",
+          "CLOUDRUN_CPU_MIN_THRESHOLD": "10%",
+          "CLOUDRUN_MEMORY_MIN_THRESHOLD": "10%",
+          "SLACK_CHANNEL_ID": "{SLACK_CHANNEL_ID}",
+          "CRON_EXPRESSION": "0 10 * 1 *",
+          "DEBUG": "true"
+      },
+      "secretEnvironmentVariables":[
+          {
+              "key": "SLACK_BOT_TOKEN",
+              "secret": "{SLACK_TOKEN}",
+              "version": "latest"
+          }
+      ],
+      "serviceAccountEmail": "{SERVICE_ACCOUNT_EMAIL}",
+      "timeout": "540s"
+  }
+}
