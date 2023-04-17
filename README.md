@@ -45,3 +45,5 @@ Please clone and star this repo to stay up to date on changes.
 **014 - Private Service Access using Goblet** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/014-goblet-private-services)] [[ Written ](https://engineering.premise.com/tutorial-connecting-cloudrun-and-cloudfunctions-to-redis-and-other-private-services-using-goblet-5782f80da6a0)] - A tutorial on how on deploying and connecting to private GCP services using Goblet
 
 **015 - CloudTasks with Goblet** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/015-goblet-cloudtask)] [[ Written ](https://engineering.premise.com/)] - A tutorial on how to deploy CloudTaskQueues, enqueue CloudTasks and handle CloudTasks all with Goblet.
+
+**016 - GCP Cloud Run Low Usage Slack Alerts** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/016-gcp-metrics-slack-alerts)] [[ Written ](https://engineering.premise.com/)] - A tutorial on how to deploy a Scheduled Job with Goblet that monitor low usage and send recomendations for downscaling through Slack.

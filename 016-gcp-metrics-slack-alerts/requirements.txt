@@ -1,0 +1,4 @@
+goblet-gcp==0.10.3
+goblet-gcp-client==0.1.2
+slack-sdk==3.20.0
+python-dotenv==1.0.0
