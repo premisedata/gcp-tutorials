@@ -1,6 +1,9 @@
 # Goblet GCP Metrics Slack Alerts
 This code sets up a scheduled job that checks the CPU and memory utilization of services in Google Cloud Platform (GCP) projects and sends a Slack message for any service that is under a defined utilization threshold.
 
+## Written Tutorial 
+[Tutorial](https://engineering.premise.com/tutorial-low-usage-alerting-on-slack-for-google-cloud-platform-gcp-cc68ac8ca4d)
+
 ## Prerequisites
 - Python 3.7 or later
 - A GCP project with active services

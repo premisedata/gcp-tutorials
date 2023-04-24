@@ -3,7 +3,7 @@
 This is a tutorial on how to use Goblet to create and handle [CloudTasks](https://cloud.google.com/tasks/docs).
 
 ## Written Tutorial 
-[Tutorial](https://engineering.premise.com/)
+[Tutorial](https://engineering.premise.com/deploy-and-handle-gcp-cloudtasks-with-goblet-in-minutes-ee138e9dd2c5)
 
 ## Prerequisites 
 
