@@ -14,6 +14,7 @@ Please clone and star this repo to stay up to date on changes.
 
 [Goblet GCP Client](https://github.com/goblet/goblet_gcp_client): Goblet GCP Client is a util library with support for creating GCP resource clients, GCP integration tests, and other related utils.
 
+[Backstage Dynamic Data Form Extension](https://github.com/premisedata/dynamic-data-form-extension): Backstage plugins that allow you to fetch data dynamically from an endpoint and populate Backstage templates. 
 
 ## Tutorials
 **001 - Forward Github Security Findings to Security Command Center** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/001-github-to-scc)] [ [Written](https://engineering.premise.com/tutorial-publishing-github-findings-to-security-command-center-2d1749f530bc)] - This tutorial goes over implementation on how to automatically forward Github security findings to GCP's security command center.
