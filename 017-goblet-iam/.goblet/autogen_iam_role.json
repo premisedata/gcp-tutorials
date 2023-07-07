@@ -1,0 +1,34 @@
+{
+    "roleId": "Goblet_Deployment_Role_goblet_iam_tutorial",
+    "role": {
+        "title": "Deployment role for goblet-iam-tutorial",
+        "description": "Goblet generated role",
+        "includedPermissions": [
+            "cloudfunctions.functions.create",
+            "cloudfunctions.functions.delete",
+            "cloudfunctions.functions.get",
+            "cloudfunctions.functions.getIamPolicy",
+            "cloudfunctions.functions.list",
+            "cloudfunctions.functions.setIamPolicy",
+            "cloudfunctions.functions.sourceCodeSet",
+            "cloudfunctions.functions.update",
+            "cloudfunctions.operations.get",
+            "cloudscheduler.jobs.create",
+            "cloudscheduler.jobs.delete",
+            "cloudscheduler.jobs.get",
+            "cloudscheduler.jobs.list",
+            "cloudscheduler.jobs.update",
+            "pubsub.subscriptions.create",
+            "pubsub.subscriptions.delete",
+            "pubsub.subscriptions.get",
+            "pubsub.subscriptions.list",
+            "pubsub.subscriptions.update",
+            "pubsub.topics.create",
+            "pubsub.topics.delete",
+            "pubsub.topics.get",
+            "pubsub.topics.list",
+            "pubsub.topics.update"
+        ],
+        "stage": "GA"
+    }
+}
