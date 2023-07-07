@@ -14,7 +14,7 @@ app.log.setLevel(logging.DEBUG)
 app.pubsub_topic("test")
 
 # Pubsub Subscription
-@app.pubsub_subscription(topic="test")
+@app.pubsub_subscription(topic="test", use_subscription=True)
 def subscription(data):
     return "success"
 
