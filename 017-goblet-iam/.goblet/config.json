@@ -1,0 +1,8 @@
+{
+    "pubsub": {
+        "serviceAccountEmail": "sa_pubsub@goblet.iam.gserviceaccount.com"
+    },
+    "scheduler": {
+        "serviceAccount": "sa_scheduler@goblet.iam.gserviceaccount.com"
+    }
+}
