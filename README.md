@@ -51,3 +51,4 @@ Please clone and star this repo to stay up to date on changes.
 
 **017 - Goblet IAM** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/017-goblet-iam)] [[ Written ]()] - A tutorial on how Goblet simplfies GCP IAM by auto generating required deployment permissions and creating a deployment service account.
 
+**018 - Dataform and BiqQuery Remote Functions** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/018-dataform-bq-remote-functions)] [[ Written ]()] - A tutorial on how to deploy BiqQuery Remote Functions for a Dataform pipeline.
