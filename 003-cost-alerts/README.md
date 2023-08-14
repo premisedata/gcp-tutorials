@@ -15,7 +15,7 @@ Publish alerts daily on a per service basis to a slack channel when any large pe
 ## Prerequisites 
 
 * GCP Account
-* Python environment (>3.7) 
+* Python environment (>3.8) 
 * Gcloud cli 
 * Slack Webhook
 
