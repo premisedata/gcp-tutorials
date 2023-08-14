@@ -1,2 +1,2 @@
-goblet-gcp==0.6.1
-google-cloud-securitycenter==1.1.0
+goblet-gcp==0.11.4
+google-cloud-securitycenter==1.23.2
