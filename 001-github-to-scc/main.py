@@ -6,7 +6,7 @@ from hmac import HMAC, compare_digest
 import datetime
 import os 
 
-app = Goblet(function_name="github-to-scc", local="local")
+app = Goblet(function_name="github-to-scc")
 goblet_entrypoint(app)
 
 ORGANIZATION = os.environ.get("ORGANIZATION")

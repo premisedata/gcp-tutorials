@@ -19,7 +19,7 @@ Create/Reopen/Resolve findings from [Github Security](https://docs.github.com/en
 * GCP Account with Security Command Center enabled
 * Custom Security Command Center Source
 * Github Account with at least one repo with security scanning enabled
-* Python environment (>3.7) 
+* Python environment (>3.8) 
 * Gcloud cli 
 
 ## Setup
