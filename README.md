@@ -49,6 +49,6 @@ Please clone and star this repo to stay up to date on changes.
 
 **016 - GCP Cloud Run Low Usage Slack Alerts** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/016-gcp-metrics-slack-alerts)] [[ Written ](https://engineering.premise.com/tutorial-low-usage-alerting-on-slack-for-google-cloud-platform-gcp-cc68ac8ca4d)] - A tutorial on how to deploy a Scheduled Job with Goblet that monitor low usage and send recomendations for downscaling through Slack.
 
-**017 - Goblet IAM** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/017-goblet-iam)] [[ Written ]()] - A tutorial on how Goblet simplfies GCP IAM by auto generating required deployment permissions and creating a deployment service account.
+**017 - Goblet IAM** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/017-goblet-iam)] [[ Written ](https://engineering.premise.com/easily-manage-iam-policies-for-serverless-rest-applications-in-gcp-with-goblet-f1580a97b74)] - A tutorial on how Goblet simplfies GCP IAM by auto generating required deployment permissions and creating a deployment service account.
 
-**018 - Dataform and BiqQuery Remote Functions** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/018-dataform-bq-remote-functions)] [[ Written ]()] - A tutorial on how to deploy BiqQuery Remote Functions for a Dataform pipeline.
+**018 - Dataform and BiqQuery Remote Functions** [[ Source ](https://github.com/premisedata/gcp-tutorials/tree/main/018-dataform-bq-remote-functions)] [[ Written ](https://engineering.premise.com/serverless-data-pipelines-in-gcp-using-dataform-and-bigquery-remote-functions-9ee235d0cb18)] - A tutorial on how to deploy BiqQuery Remote Functions for a Dataform pipeline.
